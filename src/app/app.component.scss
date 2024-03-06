@@ -1,0 +1,84 @@
+kendo-appbar {
+  padding: 32px;
+  background-color: #340034;
+  color: white;
+  text-transform: uppercase;
+}
+
+kendo-appbar h1 {
+  margin: 0;
+}
+
+kendo-appbar-section {
+  display: flex;
+  gap: 32px;
+}
+
+kendo-appbar-section a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 0 rgba(255,255,255,0.5);
+  }
+
+  to {
+    text-shadow: 0 0 5px rgba(255,255,255,0.6);
+  }
+}
+
+kendo-appbar-section a:hover {
+  animation: pulse 1s linear infinite alternate;
+}
+
+kendo-appbar-section a.active {
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0 center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+kendo-appbar-section a::before,
+kendo-appbar-section a::after {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  height: 2px;
+  display: block;
+  content: '';
+  background-color: white;
+  opacity: 0;
+}
+
+kendo-appbar-section a::after {
+  animation: rainbow 1.5s linear infinite forwards;
+  background-image: linear-gradient(to right,purple,red,orange,yellow,green,blue,purple);
+  background-repeat: repeat-x;
+  background-size: 200% 100%;
+  transition: opacity ease 200ms;
+}
+
+kendo-appbar-section a.active::before {
+  opacity: 1;
+}
+
+kendo-appbar-section a:hover::after {
+  opacity: 1;
+}

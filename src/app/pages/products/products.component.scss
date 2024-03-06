@@ -1,0 +1,28 @@
+:host {
+  max-width: 1600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 32px;
+  align-items: top;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  :host {
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+}
+
+kendo-card {
+  padding: 16px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+  font-size: 1.2em;
+}
+
+// kendo-card-footer {
+//   justify-content: space-between;
+// }

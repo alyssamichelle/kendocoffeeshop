@@ -1,0 +1,18 @@
+@for (product of products(); track product.id) {
+  <kendo-card width="360px">
+    <img [src]="product.image_url" kendoCardMedia alt="coffee product image"/>
+    <kendo-card-body>
+      <h4>{{ product.name }}</h4>
+      <hr kendoCardSeparator/>
+      <p>
+        {{ product.description }}
+      </p>
+    </kendo-card-body>
+    <kendo-card-footer class="k-hstack">
+      <span>Price {{ product.price | currency }}</span>
+      <!-- <span>Region {{ product.region }}</span> -->
+    </kendo-card-footer>
+  </kendo-card>
+} @empty {
+  <h2> Sold out! 🚨</h2>
+}
