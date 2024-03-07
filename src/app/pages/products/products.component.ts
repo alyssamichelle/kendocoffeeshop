@@ -17,7 +17,6 @@ export type Product = {
   image_url: string;
 };
 
-
 @Component({
   selector: 'app-products',
   standalone: true,

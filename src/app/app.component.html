@@ -1,12 +1,11 @@
-<kendo-appbar position="top">
+<kendo-appbar>
   <kendo-appbar-section>
     <h1>Kendo Coffee Shop</h1>
   </kendo-appbar-section>
-  <kendo-appbar-spacer width="32px"></kendo-appbar-spacer>
   <kendo-appbar-section>
     <a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a>
     <a [routerLink]="['products']" [routerLinkActive]="['active']">Products</a>
   </kendo-appbar-section>
-  <kendo-appbar-spacer></kendo-appbar-spacer>
 </kendo-appbar>
+
 <router-outlet></router-outlet>
