@@ -26,7 +26,7 @@ export type Product = {
     CardModule,
     CurrencyPipe,
     IndicatorsModule,
-    SkeletonCardComponent
+    SkeletonCardComponent,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
