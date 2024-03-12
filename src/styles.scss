@@ -5,17 +5,16 @@ body {
 }
 
 // universal styles for all kendo cards in our app; todo, move into our own card component
-.k-card {
-    padding: 16px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    font-size: 16px;
-}
+// .k-card {
+//     padding: 16px;
+//     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+//     font-size: 16px;
+// }
 
-.k-hstack {
-    align-items: center;
-    justify-content: space-between;
-}
+// .k-hstack {
+//     align-items: center;
+// }
 
-.price {
-    font-weight: 600;
-}
+// .price {
+//     font-weight: 600;
+// }

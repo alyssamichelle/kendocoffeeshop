@@ -1,13 +1,14 @@
 :host {
-  max-width: 1600px;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding: 32px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
   justify-content: center;
-  padding: 32px;
   align-items: top;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
