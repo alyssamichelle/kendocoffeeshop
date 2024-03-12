@@ -1,9 +1,11 @@
-@for (product of products(); track product.id) {
+@defer {
+  @for (product of products(); track $index) {
+  <!-- we were tracking by product.id, however, recently I learned it can be more performant to track by index where you can (shout out to Sander Elias) -->
   <kendo-card width="360px">
-    <img [src]="product.image_url" kendoCardMedia alt="coffee product image"/>
+    <img [src]="product.image_url" kendoCardMedia alt="coffee product image" />
     <kendo-card-body>
       <h4>{{ product.name }}</h4>
-      <hr kendoCardSeparator/>
+      <hr kendoCardSeparator />
       <p>
         {{ product.description }}
       </p>
@@ -13,6 +15,16 @@
       <!-- <span>Region {{ product.region }}</span> -->
     </kendo-card-footer>
   </kendo-card>
-} @empty {
+  }
+    <!-- @empty {
+    <h2> Sold out! 🚨</h2>
+    } -->
+} @placeholder {
   <h2> Sold out! 🚨</h2>
+} @loading (minimum 2s) {
+  <!-- <p>Placeholder content</p> -->
+  <skeleton-card></skeleton-card>
+  <skeleton-card></skeleton-card>
+  <skeleton-card></skeleton-card>
+  <skeleton-card></skeleton-card>
 }

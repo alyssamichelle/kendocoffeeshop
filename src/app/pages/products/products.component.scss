@@ -12,17 +12,6 @@
 
 @media (max-width: 768px) {
   :host {
-    gap: 3rem;
-    padding: 1.5rem;
+    gap: 50px;
   }
 }
-
-kendo-card {
-  padding: 16px;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
-  font-size: 1.2em;
-}
-
-// kendo-card-footer {
-//   justify-content: space-between;
-// }
