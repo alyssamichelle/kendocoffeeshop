@@ -1,4 +1,4 @@
-@defer {
+@defer (on immediate) {
 @for (product of products(); track $index) {
 <!-- we were tracking by product.id, however, recently I learned it can be more performant to track by index where you can (shout out to Sander Elias) -->
 <kendo-card width="360px">
